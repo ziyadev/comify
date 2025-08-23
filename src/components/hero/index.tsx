@@ -11,7 +11,7 @@ import { motion } from "motion/react";
 import Image, { type StaticImageData } from "next/image";
 import React from "react";
 import { Dot } from "lucide-react";
-import LogoLoop from "../motions/logo-loop";
+import LogoLoop from "../ui/motions/logo-loop";
 
 export default function Hero() {
   return (
