@@ -19,7 +19,6 @@ export default function HeroPreview() {
         </div>
         <div className="pointer-events-none  z-10 absolute inset-x-0 bottom-0 w-full h-[20%] bg-gradient-to-t from-background via-background/90 to-transparent"></div>
       </div>
-
     </div>
   );
 }
