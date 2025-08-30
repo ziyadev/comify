@@ -1,9 +1,9 @@
 "use client";
-import { Button } from "../ui/button";
 import airbnbLogo from "#/public/logos/airbnb.svg";
 import appleLogo from "#/public/logos/apple.svg";
 import disneyLogo from "#/public/logos/disney.svg";
 import facebookLogo from "#/public/logos/facebook.svg";
+import nvidiaLogo from "#/public/logos/nvidia.svg";
 import quoraLogo from "#/public/logos/quora.svg";
 import samsungLogo from "#/public/logos/samsung.svg";
 import sparkLogo from "#/public/logos/spark.svg";
@@ -11,7 +11,8 @@ import { motion } from "motion/react";
 import Image, { type StaticImageData } from "next/image";
 import React from "react";
 import { Dot } from "lucide-react";
-import LogoLoop from "../ui/motions/logo-loop";
+import { Button } from "@/components/ui/button";
+import LogoLoop from "@/components/ui/motions/logo-loop";
 
 export default function Hero() {
   return (
@@ -26,11 +27,11 @@ export default function Hero() {
         </h1>
         <p className="text-center text-muted-foreground text-xl text-balance mx-auto max-w-5xl">
           Plan your day, organise your ideas, and collaborate with ease—all in
-          one place. Nestly helps you stay focused and in control, no matter
+          one place. Comify helps you stay focused and in control, no matter
           what you’re working on.
         </p>
         <div className="flex gap-4 mt-6">
-          <Button size={"xxl"}>Get Nestly for Free</Button>
+          <Button size={"xxl"}>Get Comify for Free</Button>
           <Button variant="secondary" size={"xxl"}>
             Request Demo
           </Button>
@@ -102,6 +103,12 @@ const CompanyLogoData: Array<{
       ),
       title: "Spark Logo",
       href: "https://www.spark.com/",
+    }, {
+      node: (
+        <Image src={nvidiaLogo} alt='Nvidia Logo' className="h-8 w-auto  flex-none" />
+      ),
+      title: "Nvidia Logo",
+      href: "https://www.nvidia.com/",
     },
   ];
 

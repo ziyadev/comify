@@ -1,4 +1,3 @@
-import { Button } from "../ui/button";
 import heropreview from "#/public/sky.png";
 import feature1 from "#/public/features/feature-1.svg";
 
@@ -19,7 +18,7 @@ export default function Features() {
         <div className="space-y-2 w-full max-w-lg flex flex-col  items-start">
           <p className=" text-muted-foreground text-lg ">
             From customisable workspaces to effortless team collaboration,
-            Nestly is designed to simplify your day and help you focus on what
+            Comify is designed to simplify your day and help you focus on what
             matters most.
           </p>
           <button
