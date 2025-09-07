@@ -1,5 +1,6 @@
 import heropreview from "#/public/sky.png";
-import feature1 from "#/public/features/feature-1.svg";
+
+import apppreview from "#/public/app-preview.jpg"
 
 import Image from "next/image";
 export default function Features() {
@@ -81,7 +82,7 @@ export default function Features() {
               <div className="absolute -inset-(--padding) shadow-xs ring-1 ring-black/5 [--padding:--spacing(2)]" />
               <Image
                 alt=""
-                src={feature1}
+                src={apppreview}
                 width={2880}
                 height={1920}
                 className="rounded-(--radius) shadow-2xl ring-1 ring-black/10 "

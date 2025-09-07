@@ -17,25 +17,30 @@ import LogoLoop from "@/components/ui/motions/logo-loop";
 export default function Hero() {
   return (
     <div>
-      <div className="border-x mx-auto max-w-6xl flex flex-col items-center gap-4 py-28 px-20">
-        <div className="flex gap-2 items-center text-base/[19.2px] tracking-[-0.8px] mb-3">
-          <span className="bg-foreground w-4 rounded-full h-1.5" />
-          <span>all-in-one productivity hub</span>
+      <div className="max-w-7xl mx-auto border-x relative">
+        <Dot className="absolute size-8   -bottom-4 -right-4 z-20" />
+        <Dot className="absolute size-8   -bottom-4 -left-4 z-20" />
+        <div className="border-x mx-auto max-w-6xl flex flex-col items-center gap-4 py-28 px-20">
+          <div className="flex gap-2 items-center text-base/[19.2px] tracking-[-0.8px] mb-3">
+            <span className="bg-foreground w-4 rounded-full h-1.5" />
+            <span>all-in-one productivity hub</span>
+          </div>
+          <h1 className="text-6xl/[72px]  text-center font-semibold text-balance ">
+            Your productivity hub, perfectly built to work just the way you do.
+          </h1>
+          <p className="text-center text-muted-foreground text-xl text-balance mx-auto max-w-5xl">
+            Plan your day, organise your ideas, and collaborate with ease—all in
+            one place. Comify helps you stay focused and in control, no matter
+            what you’re working on.
+          </p>
+          <div className="flex gap-4 mt-6">
+            <Button size={"xxl"}>Get Comify for Free</Button>
+            <Button variant="secondary" size={"xxl"}>
+              Request Demo
+            </Button>
+          </div>
         </div>
-        <h1 className="text-6xl/[72px]  text-center font-semibold text-balance ">
-          Your productivity hub, perfectly built to work just the way you do.
-        </h1>
-        <p className="text-center text-muted-foreground text-xl text-balance mx-auto max-w-5xl">
-          Plan your day, organise your ideas, and collaborate with ease—all in
-          one place. Comify helps you stay focused and in control, no matter
-          what you’re working on.
-        </p>
-        <div className="flex gap-4 mt-6">
-          <Button size={"xxl"}>Get Comify for Free</Button>
-          <Button variant="secondary" size={"xxl"}>
-            Request Demo
-          </Button>
-        </div>
+
       </div>
       <div className="border-y h-22">
         <div className="relative mx-auto border-x max-w-6xl h-full flex items-center">

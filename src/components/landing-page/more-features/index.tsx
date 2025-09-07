@@ -10,13 +10,15 @@ import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { transition } from "@/components/ui/motions/transitions";
 import Image from "next/image";
+import { Dot } from "lucide-react";
 
 type CardData = {
   id: string;
   title: string;
   label: string;
   description: string;
-  Component?: React.ReactNode;
+  image: string;
+
 };
 const cardsData: CardData[] = [
   {
@@ -25,17 +27,7 @@ const cardsData: CardData[] = [
     label: "Get started quickly",
     description:
       "Choose from a variety of pre-built templates to kickstart your projects and teams, ensuring consistency and efficiency from day one.",
-    Component: (
-      <div className=" size-full overflow-hidden relative rounded-2xl ">
-        <Image
-          src={feature3}
-          alt="Feature 3"
-          height={200}
-          width={400}
-          className="w-full h-auto"
-        />
-      </div>
-    ),
+    image: "https://placehold.co/800x600?text=Workspace+Templates&font=raleway"
   },
   {
     id: "2",
@@ -44,17 +36,7 @@ const cardsData: CardData[] = [
     label: "Work together seamlessly",
     description:
       "Collaborate with your team in real-time on documents, tasks, and projects, eliminating delays and ensuring everyone stays on the same page.",
-    Component: (
-      <div className=" size-full overflow-hidden relative rounded-2xl ">
-        <Image
-          src={feature2}
-          alt="Feature 2"
-          height={200}
-          width={400}
-          className="w-full h-auto"
-        />
-      </div>
-    ),
+    image: "https://placehold.co/800x600?text=Real-Time+Collaboration&font=raleway"
   },
 
   {
@@ -63,17 +45,7 @@ const cardsData: CardData[] = [
     label: "Stay organized effortlessly",
     description:
       "Integrate your calendar to manage schedules, deadlines, and meetings directly within your workspace, never missing an important event.",
-    Component: (
-      <div className=" size-full overflow-hidden relative rounded-2xl ">
-        <Image
-          src={feature4}
-          alt="Feature 4"
-          height={200}
-          width={400}
-          className="w-full h-auto"
-        />
-      </div>
-    ),
+    image: "https://placehold.co/800x600?text=Calendar+sync&font=raleway"
   },
   {
     id: "4",
@@ -81,17 +53,7 @@ const cardsData: CardData[] = [
     label: "Monitor project progress",
     description:
       "Track the status of tasks and projects with detailed dashboards and reports, gaining insights into team performance and bottlenecks.",
-    Component: (
-      <div className=" size-full overflow-hidden relative rounded-2xl ">
-        <Image
-          src={feature5}
-          alt="Feature 5"
-          height={200}
-          width={400}
-          className="w-full h-auto"
-        />
-      </div>
-    ),
+    image: "https://placehold.co/800x600?text=Progress+tracking&font=raleway"
   },
   {
     id: "5",
@@ -99,17 +61,7 @@ const cardsData: CardData[] = [
     label: "Boost productivity",
     description:
       "Eliminate distractions and concentrate on your most important work with a dedicated focus mode, enhancing productivity and deep work sessions.",
-    Component: (
-      <div className=" size-full overflow-hidden relative rounded-2xl ">
-        <Image
-          src={feature6}
-          alt="Feature 6"
-          height={500}
-          width={600}
-          className="w-full h-auto"
-        />
-      </div>
-    ),
+    image: "https://placehold.co/800x600?text=Focus+mode&font=raleway"
   },
 ];
 function generateRandomId() {
@@ -216,7 +168,7 @@ export default function MoreFeatures() {
       </div>
       <div className="  w-full min-h-[50vh] grid grid-cols-2">
         <div className=" relative grid w-full   ">
-          {cardsData.map((item) => {
+          {cardsData.map((item, idx) => {
             const _active = activeCardId === item.id;
             return (
               <button
@@ -232,13 +184,17 @@ export default function MoreFeatures() {
                 type="button"
                 className="last:pb-0 relative pb-px bg-gradient-to-r from-primary/30 to-100% to-transparent"
               >
+
+                <Dot style={{
+                  display: idx === cardsData.length - 1 ? 'none' : 'block'
+                }} className=" absolute -bottom-2  -left-2 size-4.5 z-10" />
                 <div
                   className={
                     "flex flex-col justify-center overflow-hidden relative pl-10 bg-background h-full"
                   }
                 >
                   <div className="flex gap-8 items-center">
-                    <span className="font-semibold text-2xl">{item.title}</span>
+                    <span className="font-bold text-2xl">{item.title}</span>
                     <AnimatePresence initial={false} mode="wait">
                       {!_active && (
                         <motion.span
@@ -345,7 +301,17 @@ export default function MoreFeatures() {
                   transition={transition}
                   layoutId={item.animationId}
                 >
-                  {item.Component ? item.Component : null}
+                  <div className=" size-full overflow-hidden relative rounded-2xl ">
+                    <Image
+                      src={item.image}
+                      alt={item.title}
+                      fill
+                      objectPosition="center"
+                      objectFit="cover"
+
+                    />
+
+                  </div>
                 </motion.div>
               );
             })}
