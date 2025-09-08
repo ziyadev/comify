@@ -106,11 +106,11 @@ export default function Integrations() {
           </button>
         </div>
       </div>
-      <div className="border w-full mx-auto max-w-7xl bg-muted h-[45dvh] shadow-sm rounded-2xl  relative overflow-hidden">
-        <MarqueeFade side="left" className="from-muted" />
-        <MarqueeFade side="right" className="from-muted" />
-        <MarqueeFade side="top" className="from-muted" />
-        <MarqueeFade side="bottom" className="from-muted" />
+      <div className=" w-full h-[45dvh]  relative overflow-hidden">
+        <MarqueeFade side="left" />
+        <MarqueeFade side="right" />
+        <MarqueeFade side="top" />
+        <MarqueeFade side="bottom" />
         <div className=" absolute size-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transform  h-[130%]">
           <Marquee>
             {Array.from({ length: 4 }).map((_, index) => (
@@ -122,7 +122,7 @@ export default function Integrations() {
                   .sort(() => Math.random() - 0.5)
                   .map(([name, Icon]) => (
                     <MarqueeItem
-                      className="w-28 mx-8 my-3 aspect-square border bg-background rounded-3xl  shadow-sm flex items-center justify-center"
+                      className="w-28 mx-5 my-3 aspect-square bg-muted rounded-xl  flex items-center justify-center"
                       key={name}
                     >
                       <Icon className="size-14" />

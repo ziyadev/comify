@@ -3,6 +3,7 @@ import Hero from "@/components/landing-page/hero";
 import HeroPreview from "@/components/landing-page/hero/hero-preview";
 import Integrations from "@/components/landing-page/integrations";
 import MoreFeatures from "@/components/landing-page/more-features";
+import Testamonial from "@/components/landing-page/testamonial";
 import Usage from "@/components/landing-page/usage";
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
       <MoreFeatures />
       <Usage />
       <Integrations />
+      <Testamonial />
     </div>
   );
 }
