@@ -4,7 +4,7 @@ import { transition } from "@/components/ui/motions/transitions";
 import { cn, inter } from "@/lib/utils";
 import NumberFlow from "@number-flow/react";
 import { ChevronLeft, ChevronRight, Cloud, Plus } from "lucide-react";
-import { motion } from "motion/react";
+import { motion, useScroll, useTransform } from "motion/react";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
@@ -13,6 +13,19 @@ export default function Usage() {
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
   const [visible, setVisible] = useState<Record<number, boolean>>({});
+  const ref = useRef<HTMLDivElement>(null);
+
+  // Track scroll position of this section
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["end center", "end start"],
+  });
+  const scaleX = useTransform(scrollYProgress, [0, 1], [1, 0.95]);
+  const borderRadius = useTransform(
+    scrollYProgress,
+    [0, 0.2, 1],
+    ["0px", "30px", "30px"],
+  );
   useEffect(() => {
     const el = scrollContainerRef.current;
     if (!el) return;
@@ -51,7 +64,14 @@ export default function Usage() {
     };
   }, []);
   return (
-    <div className=" relative bg-[#161616]">
+    <motion.div
+      ref={ref}
+      style={{
+        scaleX,
+        borderRadius,
+      }}
+      className=" relative bg-[#161616]"
+    >
       <div className="relative top-0 z-0 mx-auto mt-0 flex h-16 max-w-[min(700px,calc(100vw-2rem))] -translate-y-px items-start justify-center text-white">
         <svg
           viewBox="0 0 85 64"
@@ -379,6 +399,6 @@ export default function Usage() {
           </g>
         </svg>
       </div>
-    </div>
+    </motion.div>
   );
 }
