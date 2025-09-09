@@ -18,7 +18,6 @@ type CardData = {
   label: string;
   description: string;
   image: string;
-
 };
 const cardsData: CardData[] = [
   {
@@ -27,7 +26,7 @@ const cardsData: CardData[] = [
     label: "Get started quickly",
     description:
       "Choose from a variety of pre-built templates to kickstart your projects and teams, ensuring consistency and efficiency from day one.",
-    image: "https://placehold.co/800x600?text=Workspace+Templates&font=raleway"
+    image: "https://placehold.co/800x600?text=Workspace+Templates&font=raleway",
   },
   {
     id: "2",
@@ -36,7 +35,8 @@ const cardsData: CardData[] = [
     label: "Work together seamlessly",
     description:
       "Collaborate with your team in real-time on documents, tasks, and projects, eliminating delays and ensuring everyone stays on the same page.",
-    image: "https://placehold.co/800x600?text=Real-Time+Collaboration&font=raleway"
+    image:
+      "https://placehold.co/800x600?text=Real-Time+Collaboration&font=raleway",
   },
 
   {
@@ -45,7 +45,7 @@ const cardsData: CardData[] = [
     label: "Stay organized effortlessly",
     description:
       "Integrate your calendar to manage schedules, deadlines, and meetings directly within your workspace, never missing an important event.",
-    image: "https://placehold.co/800x600?text=Calendar+sync&font=raleway"
+    image: "https://placehold.co/800x600?text=Calendar+sync&font=raleway",
   },
   {
     id: "4",
@@ -53,7 +53,7 @@ const cardsData: CardData[] = [
     label: "Monitor project progress",
     description:
       "Track the status of tasks and projects with detailed dashboards and reports, gaining insights into team performance and bottlenecks.",
-    image: "https://placehold.co/800x600?text=Progress+tracking&font=raleway"
+    image: "https://placehold.co/800x600?text=Progress+tracking&font=raleway",
   },
   {
     id: "5",
@@ -61,7 +61,7 @@ const cardsData: CardData[] = [
     label: "Boost productivity",
     description:
       "Eliminate distractions and concentrate on your most important work with a dedicated focus mode, enhancing productivity and deep work sessions.",
-    image: "https://placehold.co/800x600?text=Focus+mode&font=raleway"
+    image: "https://placehold.co/800x600?text=Focus+mode&font=raleway",
   },
 ];
 function generateRandomId() {
@@ -184,10 +184,12 @@ export default function MoreFeatures() {
                 type="button"
                 className="last:pb-0 relative pb-px bg-gradient-to-r from-primary/30 to-100% to-transparent"
               >
-
-                <Dot style={{
-                  display: idx === cardsData.length - 1 ? 'none' : 'block'
-                }} className=" absolute -bottom-2  -left-2 size-4.5 z-10" />
+                <Dot
+                  style={{
+                    display: idx === cardsData.length - 1 ? "none" : "block",
+                  }}
+                  className=" absolute -bottom-2  -left-2 size-4.5 z-10"
+                />
                 <div
                   className={
                     "flex flex-col justify-center overflow-hidden relative pl-10 bg-background h-full"
@@ -308,9 +310,7 @@ export default function MoreFeatures() {
                       fill
                       objectPosition="center"
                       objectFit="cover"
-
                     />
-
                   </div>
                 </motion.div>
               );

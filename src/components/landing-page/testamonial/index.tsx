@@ -30,6 +30,7 @@ export default function Testamonial() {
             name: "Eleanor Vance",
             role: "Head of Product, Apex Solutions",
             title: "Optimized Global Supply Chain for PharmaCorp",
+            avatar: "https://github.com/shadcn.png",
             subtitle:
               "PharmaCorp leveraged Comify to build an efficient, secure, and compliant supply chain network:",
             list: [
@@ -44,6 +45,7 @@ export default function Testamonial() {
             name: "Marcus Thorne",
             role: "Senior Project Manager, Horizon Innovations",
             title: "Streamlined Project Management for Horizon Innovations",
+            avatar: "https://github.com/ziyadev.png",
             subtitle:
               "Horizon Innovations leveraged Comify to enhance project delivery and team collaboration:",
             list: [
@@ -58,6 +60,7 @@ export default function Testamonial() {
             name: "Sophia Chen",
             role: "Operations Director, Quantum Dynamics",
             title: "Optimized Operational Efficiency at Quantum Dynamics",
+            avatar: "https://github.com/leerob.png",
             subtitle:
               "Quantum Dynamics used Comify to achieve greater agility and responsiveness in their operations:",
             list: [
@@ -72,6 +75,7 @@ export default function Testamonial() {
             name: "David Kincaid",
             role: "Lead Software Engineer, InnovateCorp",
             title: "Accelerated Software Development Cycles for InnovateCorp",
+            avatar: "https://github.com/emilkowalski.png",
             subtitle:
               "InnovateCorp integrated Comify to streamline their development process and boost team performance:",
             list: [

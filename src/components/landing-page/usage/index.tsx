@@ -51,8 +51,51 @@ export default function Usage() {
     };
   }, []);
   return (
-    <div className=" bg-[#161616] w-full min-h-[40vh] flex justify-center">
-      <div className="px-12 py-32 border-x  text-background border-[#303030] mx-auto max-w-7xl flex flex-col gap-22">
+    <div className=" relative bg-[#161616]">
+      <div className="relative top-0 z-0 mx-auto mt-0 flex h-16 max-w-[min(700px,calc(100vw-2rem))] -translate-y-px items-start justify-center text-white">
+        <svg
+          viewBox="0 0 85 64"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className="h-full w-auto shrink-0 translate-x-px translate-y-px overflow-visible"
+        >
+          <title>Arrow</title>
+          <rect
+            x={0}
+            y={0}
+            width={85}
+            height={1}
+            fill="currentColor"
+            transform="translate(0, -1)"
+          />
+          <path
+            d="M50 45C57.3095 56.6952 71.2084 63.9997 85 64V0H0C13.7915 0 26.6905 7.30481 34 19L50 45Z"
+            fill="currentColor"
+          />
+        </svg>
+        <div className="border-t-1 relative z-10 h-[calc(100%+1px)] min-w-0 grow border-current bg-current" />
+        <svg
+          viewBox="0 0 85 64"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className="h-full w-auto shrink-0 -translate-x-px translate-y-px -scale-x-100 overflow-visible"
+        >
+          <title>Arrow</title>
+          <rect
+            x={0}
+            y={0}
+            width={85}
+            height={1}
+            fill="currentColor"
+            transform="translate(0, -1)"
+          />
+          <path
+            d="M50 45C57.3095 56.6952 71.2084 63.9997 85 64V0H0C13.7915 0 26.6905 7.30481 34 19L50 45Z"
+            fill="currentColor"
+          />
+        </svg>
+      </div>
+      <div className="px-12 py-32 -my-16 border-x  text-background border-white/5 mx-auto max-w-7xl flex flex-col gap-22">
         <div>
           <div className="flex justify-between items-end">
             <div className="flex flex-col gap-3">
@@ -78,18 +121,18 @@ export default function Usage() {
                   data-index={idx}
                   initial={{
                     opacity: 0.2,
-                    filter: "blur(2px)",
+                    filter: "blur(1.5px)",
                   }}
                   animate={
                     visible[idx]
                       ? {
-                        opacity: 1,
-                        filter: "blur(0px)",
-                      }
+                          opacity: 1,
+                          filter: "blur(0px)",
+                        }
                       : {
-                        opacity: 0.5,
-                        filter: "blur(2px)",
-                      }
+                          opacity: 0.5,
+                          filter: "blur(1.5px)",
+                        }
                   }
                   transition={transition}
                   className="relative border border-[#202020] flex px-2 aspect-9/16 pb-6 w-72 shrink-0 snap-start scroll-ml-(--scroll-padding) flex-col justify-end overflow-hidden rounded-2xl sm:aspect-3/4 sm:w-96"
@@ -101,6 +144,7 @@ export default function Usage() {
                     objectFit="cover"
                     objectPosition="center"
                     className="rounded-2xl"
+                    sizes="(min-width: 768px) 50vw, 100vw"
                   />
                   <div
                     aria-hidden="true"
@@ -174,7 +218,7 @@ export default function Usage() {
           </div>
         </div>
         <div>
-          <div className="grid grid-cols-4 border-y border-[#303030]  -mx-12 *:border-[#303030] [clip-path:inset(1px_0_0_1px)] *:border-l *:border-t ">
+          <div className="grid grid-cols-4 border-y border-white/5  -mx-12 *:border-white/5 [clip-path:inset(1px_0_0_1px)] *:border-l *:border-t ">
             {[
               {
                 title: "Collaboration",
@@ -245,7 +289,7 @@ export default function Usage() {
               </h1>
             </div>
           </div>
-          <div className="grid gap-12 divide-y md:divide-y-0 md:divide-x *:text-center md:grid-cols-3 md:gap-2 divide-[#303030]">
+          <div className="grid gap-12 divide-y md:divide-y-0 md:divide-x *:text-center md:grid-cols-3 md:gap-2 divide-white/5">
             <div className="space-y-4">
               <div
                 className="text-background text-5xl font-bold"
@@ -282,6 +326,58 @@ export default function Usage() {
             aligned with user needs and business goals.
           </p>
         </div>
+      </div>
+      <div className="relative top-0 z-0 mx-auto mt-0 flex h-16 max-w-[min(700px,calc(100vw-2rem))] -translate-y-px items-start justify-center text-white">
+        {/* Left arrow flipped vertically */}
+        <svg
+          viewBox="0 0 85 64"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className="h-full w-auto shrink-0 translate-x-px overflow-visible"
+        >
+          <g transform="scale(1,-1) translate(0,-64)">
+            <title>Arrow</title>
+            <rect
+              x={0}
+              y={0}
+              width={85}
+              height={1}
+              fill="currentColor"
+              transform="translate(0, -1)"
+            />
+            <path
+              d="M50 45C57.3095 56.6952 71.2084 63.9997 85 64V0H0C13.7915 0 26.6905 7.30481 34 19L50 45Z"
+              fill="currentColor"
+            />
+          </g>
+        </svg>
+
+        {/* Middle bar (unchanged) */}
+        <div className="border-t-1 relative z-10 h-[calc(100%+1px)] min-w-0 grow border-current bg-current" />
+
+        {/* Right arrow flipped vertically and horizontally */}
+        <svg
+          viewBox="0 0 85 64"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className="h-full w-auto shrink-0 -translate-x-px overflow-visible -scale-x-100"
+        >
+          <g transform="scale(1,-1) translate(0,-64)">
+            <title>Arrow</title>
+            <rect
+              x={0}
+              y={0}
+              width={85}
+              height={1}
+              fill="currentColor"
+              transform="translate(0, -1)"
+            />
+            <path
+              d="M50 45C57.3095 56.6952 71.2084 63.9997 85 64V0H0C13.7915 0 26.6905 7.30481 34 19L50 45Z"
+              fill="currentColor"
+            />
+          </g>
+        </svg>
       </div>
     </div>
   );
