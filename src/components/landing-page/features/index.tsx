@@ -1,22 +1,68 @@
+import * as motion from "motion/react-client";
 import heropreview from "#/public/sky.png";
-
-import apppreview from "#/public/app-preview.jpg"
+import apppreview from "#/public/app-preview.jpg";
 
 import Image from "next/image";
+import {
+  fadeUp,
+  scaleUp,
+  transition,
+  viewPort,
+} from "@/components/ui/motions/transitions";
 export default function Features() {
   return (
     <div className="mx-auto max-w-7xl flex flex-col items-center gap-16 ">
-      <div className="flex justify-between items-end">
-        <div className="flex flex-col gap-3">
-          <div className="flex gap-2 items-center text-base/[19.2px] tracking-[-0.8px] mb-3">
+      <motion.div
+        initial={{
+          ...fadeUp.initial,
+        }}
+        whileInView={{
+          ...scaleUp.animate,
+        }}
+        viewport={viewPort}
+        transition={transition}
+        className="flex justify-between items-end"
+      >
+        <motion.div
+          initial={{
+            ...scaleUp.initial,
+          }}
+          whileInView={{
+            ...scaleUp.animate,
+          }}
+          viewport={viewPort}
+          transition={transition}
+          className="flex flex-col gap-3"
+        >
+          <motion.div
+            initial={{
+              ...scaleUp.initial,
+            }}
+            whileInView={{
+              ...scaleUp.animate,
+            }}
+            viewport={viewPort}
+            transition={transition}
+            className="flex gap-2 items-center text-base/[19.2px] tracking-[-0.8px] mb-3"
+          >
             <span className="bg-foreground w-4 rounded-full h-1.5" />
             <span>Our first in class features</span>
-          </div>
+          </motion.div>
           <h1 className="text-5xl font-semibold text-balance ">
             Tools that keep you organised, on track, and ready to achieve more.
           </h1>
-        </div>
-        <div className="space-y-2 w-full max-w-lg flex flex-col  items-start">
+        </motion.div>
+        <motion.div
+          initial={{
+            ...scaleUp.initial,
+          }}
+          whileInView={{
+            ...scaleUp.animate,
+          }}
+          viewport={viewPort}
+          transition={transition}
+          className="space-y-2 w-full max-w-lg flex flex-col  items-start"
+        >
           <p className=" text-muted-foreground text-lg ">
             From customisable workspaces to effortless team collaboration,
             Comify is designed to simplify your day and help you focus on what
@@ -71,9 +117,19 @@ export default function Features() {
               </div>
             </span>
           </button>
-        </div>
-      </div>
-      <div className="grid gap-6 w-full">
+        </motion.div>
+      </motion.div>
+      <motion.div
+        initial={{
+          ...scaleUp.initial,
+        }}
+        whileInView={{
+          ...scaleUp.animate,
+        }}
+        viewport={viewPort}
+        transition={transition}
+        className="grid gap-6 w-full"
+      >
         <div className="relative w-full rounded-2xl  aspect-[16/10] overflow-hidden flex justify-center items-center">
           <Image src={heropreview} alt="Hero Preview" fill objectFit="cover" />
           <div className="pointer-events-none  z-10 absolute inset-x-0 bottom-0 w-full h-[20%] bg-gradient-to-t from-background via-background/90 to-transparent"></div>
@@ -92,9 +148,30 @@ export default function Features() {
         </div>
 
         {/* bento grid section */}
-        <div className="grid grid-cols-3 gap-6 w-full">
+        <motion.div
+          variants={{
+            hidden: { ...fadeUp.initial, y: 50 },
+            show: {
+              ...fadeUp.animate,
+              transition: {
+                staggerChildren: 0.17,
+              },
+            },
+          }}
+          initial="hidden"
+          whileInView="show"
+          viewport={viewPort}
+          className="grid grid-cols-3 gap-6 w-full"
+        >
           {/* first feature */}
-          <div className="flex flex-col gap-3">
+          <motion.div
+            variants={{
+              hidden: { ...fadeUp.initial, y: 50 },
+              show: { ...fadeUp.animate },
+            }}
+            transition={transition}
+            className="flex flex-col gap-3"
+          >
             <div className=" rounded-(--radius) aspect-[3/2] overflow-hidden relative">
               <Image
                 src={heropreview}
@@ -163,9 +240,16 @@ export default function Features() {
                 </span>
               </button>
             </div>
-          </div>
+          </motion.div>
           {/* second feature */}
-          <div className="flex flex-col gap-3">
+          <motion.div
+            variants={{
+              hidden: { ...fadeUp.initial, y: 50 },
+              show: { ...fadeUp.animate },
+            }}
+            transition={transition}
+            className="flex flex-col gap-3"
+          >
             <div className=" rounded-(--radius) aspect-[3/2] overflow-hidden relative">
               <Image
                 src={heropreview}
@@ -234,9 +318,16 @@ export default function Features() {
                 </span>
               </button>
             </div>
-          </div>
+          </motion.div>
           {/* third feature */}
-          <div className="flex flex-col gap-3">
+          <motion.div
+            variants={{
+              hidden: { ...fadeUp.initial, y: 50 },
+              show: { ...fadeUp.animate },
+            }}
+            transition={transition}
+            className="flex flex-col gap-3"
+          >
             <div className=" rounded-(--radius) aspect-[3/2] overflow-hidden relative">
               <Image
                 src={heropreview}
@@ -252,7 +343,8 @@ export default function Features() {
                 Collaborate without interruptions.
               </h4>
               <p className="text-muted-foreground text-balance">
-                Share updates, tag teammates, and move work forward — even when you’re not online.
+                Share updates, tag teammates, and move work forward — even when
+                you’re not online.
               </p>
               <button
                 type="button"
@@ -304,9 +396,9 @@ export default function Features() {
                 </span>
               </button>
             </div>
-          </div>
-        </div>
-      </div>
+          </motion.div>
+        </motion.div>
+      </motion.div>
     </div>
   );
 }

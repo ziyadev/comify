@@ -1,9 +1,26 @@
-import heropreview from "#/public/sky.png"
-import apppreview from "#/public/app-preview.jpg"
-import Image from 'next/image';
+"use client";
+import heropreview from "#/public/sky.png";
+import apppreview from "#/public/app-preview.jpg";
+import Image from "next/image";
+import { motion, useScroll, useTransform } from "motion/react";
+import { useRef } from "react";
+import { transition } from "@/components/ui/motions/transitions";
 export default function HeroPreview() {
+  const ref = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "start start"],
+  });
+  const scale = useTransform(scrollYProgress, [0, 1], [0.9, 1]);
   return (
-    <div className="container mx-auto px-10 group">
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, scale: 0.4, y: -100, filter: "blur(10px)" }}
+      animate={{ opacity: 1, scale: 0.9, y: 0, filter: "blur(0px)" }}
+      style={{ scale }}
+      transition={{ ...transition, delay: 0.5 }}
+      className="container mx-auto px-10 group"
+    >
       <div className="relative rounded-2xl  aspect-[16/10] overflow-hidden flex justify-center items-center shadow-xs">
         <Image src={heropreview} alt="Hero Preview" fill objectFit="cover" />
         <div className=" h-142 sm:h-auto sm:w-304 relative aspect-[var(--width)/var(--height)] [--radius:var(--radius-xl)] z-20">
@@ -19,6 +36,6 @@ export default function HeroPreview() {
         </div>
         <div className="pointer-events-none  z-10 absolute inset-x-0 bottom-0 w-full h-[20%] bg-gradient-to-t from-background via-background/90 to-transparent"></div>
       </div>
-    </div>
+    </motion.div>
   );
 }

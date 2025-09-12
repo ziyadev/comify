@@ -5,7 +5,7 @@ import { type PropsWithChildren, useEffect } from "react";
 export default function SmoothScrollWrapper({ children }: PropsWithChildren) {
   useEffect(() => {
     const lenis = new Lenis({
-      duration: 2,
+      duration: 1.5,
     });
 
     const onFrame = (time: number) => {

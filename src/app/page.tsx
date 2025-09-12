@@ -9,7 +9,7 @@ import Usage from "@/components/landing-page/usage";
 
 export default function Home() {
   return (
-    <div className="min-h-[800vh] space-y-36">
+    <div className=" space-y-36">
       <Hero />
       <HeroPreview />
       <Features />

@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Inter, Raleway } from "next/font/google";
+import { Raleway } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/landing-page/footer";
+import SmoothScrollWrapper from "@/components/smooth-scroll-wrapper";
 
 const raleway = Raleway({
   variable: "--font-raleway",
@@ -30,9 +31,11 @@ export default function RootLayout({
           letterSpacing: "0.02em",
         }}
       >
-        <Navbar />
-        {children}
-        <Footer />
+        <SmoothScrollWrapper>
+          <Navbar />
+          {children}
+          <Footer />
+        </SmoothScrollWrapper>
       </body>
     </html>
   );
