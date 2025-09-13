@@ -2,7 +2,7 @@
 
 A modern and highly customizable landing page template built with Next.js. Comify provides a sleek design and smooth user experience, perfect for showcasing your product or service.
 
-<img width="1866" height="1164" alt="Image" src="https://github.com/user-attachments/assets/ff49d76b-a14e-407c-a929-fca35d17a998" />
+<img width="1866" height="1164" alt="Image" src="https://github.com/user-attachments/assets/8425522a-336e-43be-90fb-96dedda38e37" />
 
 ## ✨ Features
 
