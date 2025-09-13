@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { Button } from "../ui/button";
 
 export default function PricingComparator() {
@@ -11,7 +10,7 @@ export default function PricingComparator() {
               <h3 className=" md:text-xl font-bold">Compare prices</h3>
               <p className="text-muted-foreground text-sm md:text-base ">
                 {" "}
-                Price per month (billed yearly)
+                Price per month
               </p>
             </div>
           </div>
