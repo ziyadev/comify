@@ -25,7 +25,7 @@ export default function Hero() {
           by="word"
           once
           transition={transition}
-          className="text-6xl/[72px]  text-center font-semibold text-balance "
+          className="text-3xl md:text-6xl/[72px]  text-center font-semibold text-balance "
         >
           Find the perfect plan for your team, designed to grow with you.
         </TextAnimate>
@@ -35,7 +35,7 @@ export default function Hero() {
           once
           transition={transition}
           delay={0.5}
-          className="text-center text-muted-foreground text-xl text-balance mx-auto max-w-5xl"
+          className="text-center text-muted-foreground md:text-xl text-balance mx-auto max-w-5xl"
         >
           Unlock powerful features and collaborate seamlessly. Choose a plan
           that scales with your needs, with no hidden fees or long-term

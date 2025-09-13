@@ -18,7 +18,7 @@ export default function PricingCards() {
         initial="hidden"
         whileInView="show"
         viewport={viewPort}
-        className=" grid gap-6 md:grid-cols-4"
+        className=" grid gap-6 md:grid-cols-4 px-4"
       >
         <motion.div
           variants={{
