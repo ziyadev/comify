@@ -4,7 +4,7 @@ A modern and highly customizable landing page template built with Next.js. Comif
 
 <img width="3666" height="2071" alt="Image" src="https://github.com/user-attachments/assets/55e8228b-50db-4f63-bdce-de4ab66f6265" />
 
-[![License](https://img.shields.io/github/license/ziyadev/comify?style=for-the-badge&color=blue)](https://github.com/ziyadev/comify/blob/main/LICENSE.md)
+[![License](https://img.shields.io/github/license/ziyadev/comify?style=for-the-badge&color=blue)](https://github.com/ziyadev/comify/blob/master/LICENSE.md)
 [![Maintained](https://img.shields.io/badge/maintained%3F-yes-success.svg?style=for-the-badge)](https://github.com/ziyadev)
 [![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-success.svg?style=for-the-badge)](https://github.com/ziyadev/comify#contributing)
 
