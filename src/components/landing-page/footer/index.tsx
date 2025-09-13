@@ -3,13 +3,13 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <div className="max-w-7xl mx-auto  py-24">
-      <div className="items-end grid grid-cols-1 sm:grid-cols-2 gap-4">
+    <div className="max-w-7xl mx-auto  py-24 px-8">
+      <div className="items-end grid grid-cols-1 sm:grid-cols-2 gap-4 ">
         <div>
-          <h2 className="text-lg md:text-xl font-semibold text-zinc-900">
+          <h2 className="text-lg md:text-xl font-semibold ">
             Get started with our app today
           </h2>
-          <p className="text-base mt-4 font-medium text-zinc-500 lg:text-balance">
+          <p className="text-base mt-4 font-medium text-muted-foreground lg:text-balance">
             Streamline your workflow and collaborate seamlessly on staging and
             temporary environments
           </p>
@@ -63,10 +63,7 @@ export default function Footer() {
       <div className="pt-6 mt-6 border-t grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-24 border-black/5">
         <div className="space-y-4">
           <nav aria-labelledby="footer-heading-0">
-            <h2
-              className="text-base font-semibold text-zinc-900"
-              id="footer-heading-0"
-            >
+            <h2 className="text-base font-semibold " id="footer-heading-0">
               Company
             </h2>
             <ul className="mt-4 space-y-4">
@@ -99,10 +96,7 @@ export default function Footer() {
         </div>
         <div className="space-y-4">
           <nav aria-labelledby="footer-heading-1">
-            <h2
-              className="text-base font-semibold text-zinc-900"
-              id="footer-heading-1"
-            >
+            <h2 className="text-base font-semibold " id="footer-heading-1">
               Services
             </h2>
             <ul className="mt-4 space-y-4">
@@ -135,10 +129,7 @@ export default function Footer() {
         </div>
         <div className="space-y-4">
           <nav aria-labelledby="footer-heading-2">
-            <h2
-              className="text-base font-semibold text-zinc-900"
-              id="footer-heading-2"
-            >
+            <h2 className="text-base font-semibold " id="footer-heading-2">
               Resources
             </h2>
             <ul className="mt-4 space-y-4">
@@ -171,10 +162,7 @@ export default function Footer() {
         </div>
         <div className="space-y-4">
           <nav aria-labelledby="footer-heading-3">
-            <h2
-              className="text-base font-semibold text-zinc-900"
-              id="footer-heading-3"
-            >
+            <h2 className="text-base font-semibold " id="footer-heading-3">
               Support &amp; Legal
             </h2>
             <ul className="mt-4 space-y-4">

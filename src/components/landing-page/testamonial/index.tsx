@@ -11,18 +11,18 @@ export default function Testamonial() {
             <span className="bg-foreground w-4 rounded-full h-1.5" />
             <span>Loved by forward-thinking teams</span>
           </div>
-          <h1 className="text-5xl font-bold  ">
+          <h1 className="text-3xl md:text-5xl font-bold  ">
             Comify transformed our workflow, boosting efficiency and
             collaboration.
           </h1>
         </div>
-        <p className=" text-muted-foreground text-lg ">
+        <p className=" text-muted-foreground md:text-lg ">
           From intuitive project management to seamless team communication,
           Comify provides the tools we need to succeed and stay ahead in a
           dynamic environment.
         </p>
       </div>
-      <div className="grid grid-cols-2 gap-8 w-full">
+      <div className="grid md:grid-cols-2 gap-8 w-full px-4 md:px-0">
         {[
           {
             testamonial:

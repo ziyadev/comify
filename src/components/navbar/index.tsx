@@ -4,6 +4,7 @@ import {
   CircleCheckIcon,
   CircleHelpIcon,
   CircleIcon,
+  AlignJustify,
   ExternalLink,
 } from "lucide-react";
 import Image from "next/image";
@@ -38,13 +39,14 @@ export default function Navbar() {
       initial={{ y: -100, opacity: 0, filter: "blur(10px)", scale: 0.5 }}
       animate={{ y: 0, opacity: 1, filter: "blur(0px)", scale: 1 }}
       transition={transition}
-      className="border-b fixed top-4 z-[100] bg-muted shadow-sm max-w-6xl left-1/2 -translate-x-1/2 w-full border px-8 rounded-xl"
+      className="border-b fixed top-10 md:top-4 z-[100] bg-muted shadow-sm max-w-sm sm:max-w-md md:max-w-xl lg:max-w-6xl left-1/2 -translate-x-1/2 w-full border px-8 rounded-xl"
     >
-      <nav className=" flex justify-between items-center h-16 mx-auto max-w-6xl">
+      <nav className=" flex justify-between items-center h-16 mx-auto lg:max-w-6xl">
         <Link href="/">
           <Image src="/logo.svg" alt="Comify Logo" width={40} height={45} />
         </Link>
-        <NavigationMenu viewport={false}>
+
+        <NavigationMenu className="hidden lg:block" viewport={false}>
           <NavigationMenuList>
             <NavigationMenuItem>
               <NavigationMenuTrigger className="bg-transparent ">
@@ -140,7 +142,7 @@ export default function Navbar() {
             </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
-        <div className="space-x-3">
+        <div className="space-x-3 hidden lg:block">
           <Button variant={"ghost"} className="text-muted-foreground">
             Changelog
             <ArrowUpRight />
@@ -150,6 +152,11 @@ export default function Navbar() {
             <span className="p-1 bg-gray-900 rounded ">
               <ArrowUpRight />
             </span>
+          </Button>
+        </div>
+        <div className="lg:hidden flex items-center ">
+          <Button size={"icon"} variant={"ghost"}>
+            <AlignJustify className="size-6" />
           </Button>
         </div>
       </nav>

@@ -37,20 +37,20 @@ const icons = {
 };
 export default function Integrations() {
   return (
-    <div className="mx-auto max-w-7xl flex flex-col items-center gap-16 ">
-      <div className="flex justify-between items-end ">
+    <div className="mx-auto md:max-w-7xl flex flex-col items-center gap-16  overflow-hidden ">
+      <div className="flex flex-col gap-4 md:flex-row md:justify-between md:items-end px-6 md:px-0 ">
         <div className="flex flex-col gap-3">
           <div className="flex gap-2 items-center text-base/[19.2px] tracking-[-0.8px] mb-3">
             <span className="bg-foreground w-4 rounded-full h-1.5" />
             <span>Seamless Integrations</span>
           </div>
-          <h1 className="text-5xl font-semibold text-balance ">
+          <h1 className="text-3xl md:text-5xl font-semibold text-balance ">
             Connect your favorite tools and seamlessly streamline your entire
             workflow.
           </h1>
         </div>
         <div className="space-y-2 w-full max-w-lg flex flex-col  items-start">
-          <p className=" text-muted-foreground text-lg ">
+          <p className=" text-muted-foreground md:text-lg ">
             Connect with the tools you already use and love. Our powerful
             integrations help you centralize your work, automate tasks, and
             enhance productivity without leaving Comify.
@@ -122,10 +122,10 @@ export default function Integrations() {
                   .sort(() => Math.random() - 0.5)
                   .map(([name, Icon]) => (
                     <MarqueeItem
-                      className="w-28 mx-5 my-3 aspect-square bg-muted rounded-xl  flex items-center justify-center"
+                      className=" w-16 md:w-28 mx-5 my-3 aspect-square bg-muted rounded-xl  flex items-center justify-center"
                       key={name}
                     >
-                      <Icon className="size-14" />
+                      <Icon className="size-8 md:size-14" />
                     </MarqueeItem>
                   ))}
               </MarqueeContent>

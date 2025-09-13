@@ -156,18 +156,18 @@ export default function MoreFeatures() {
             <span className="bg-foreground w-4 rounded-full h-1.5" />
             <span>Trusted by fast-moving teams</span>
           </div>
-          <h1 className="text-5xl font-bold  ">
+          <h1 className="text-3xl md:text-5xl font-bold  ">
             Comify helps us stay aligned and move faster, without the chaos.
           </h1>
         </div>
-        <p className=" text-muted-foreground text-lg ">
+        <p className=" text-muted-foreground md:text-lg ">
           From customisable workspaces to effortless team collaboration, Comify
           is designed to simplify your day and help you focus on what matters
           most.
         </p>
       </div>
-      <div className="  w-full min-h-[50vh] grid grid-cols-2">
-        <div className=" relative grid w-full   ">
+      <div className="  w-full min-h-[70vh] md:min-h-[50vh] grid md:grid-cols-2">
+        <div className=" relative grid w-full px-3 md:px-0  ">
           {cardsData.map((item, idx) => {
             const _active = activeCardId === item.id;
             return (
@@ -182,7 +182,7 @@ export default function MoreFeatures() {
                   }
                 }}
                 type="button"
-                className="last:pb-0 relative pb-px bg-gradient-to-r from-primary/30 to-100% to-transparent"
+                className="last:pb-0 relative pb-px bg-gradient-to-r from-primary/30 to-100% to-transparent w-full"
               >
                 <Dot
                   style={{
@@ -192,10 +192,10 @@ export default function MoreFeatures() {
                 />
                 <div
                   className={
-                    "flex flex-col justify-center overflow-hidden relative pl-10 bg-background h-full"
+                    "flex flex-col justify-center overflow-hidden relative pl-10 bg-background size-full"
                   }
                 >
-                  <div className="flex gap-8 items-center">
+                  <div className="flex gap-8 items-center ">
                     <span className="font-bold text-2xl">{item.title}</span>
                     <AnimatePresence initial={false} mode="wait">
                       {!_active && (
@@ -210,7 +210,7 @@ export default function MoreFeatures() {
                           }}
                           exit={{ opacity: 0, filter: "blur(10px)" }}
                           transition={transition}
-                          className="text-muted-foreground text-base "
+                          className="text-muted-foreground text-base hidden md:block"
                         >
                           {item.label}
                         </motion.span>
@@ -271,7 +271,7 @@ export default function MoreFeatures() {
             );
           })}
         </div>
-        <motion.div className="  relative  rounded-2xl bg-muted p-10  ">
+        <motion.div className="  relative  rounded-2xl bg-muted p-10 hidden md:block  ">
           <AnimatePresence>
             {cards.map((item, idx) => {
               return (

@@ -25,7 +25,7 @@ export default function Hero() {
       <div className="max-w-7xl mx-auto border-x relative pt-12">
         <Dot className="absolute size-8   -bottom-4 -right-4 z-20" />
         <Dot className="absolute size-8   -bottom-4 -left-4 z-20" />
-        <div className="border-x mx-auto max-w-6xl flex flex-col items-center gap-4 py-28 px-20">
+        <div className="border-x mx-auto max-w-6xl flex flex-col items-center gap-4 py-28 px-8 md:px-20">
           <div className="flex gap-2 items-center text-base/[19.2px] tracking-[-0.8px] mb-3">
             <span className="bg-foreground w-4 rounded-full h-1.5" />
             <TextAnimate
@@ -43,7 +43,7 @@ export default function Hero() {
             by="word"
             once
             transition={transition}
-            className="text-6xl/[72px]  text-center font-semibold text-balance "
+            className="text-4xl md:text-6xl/[72px]  text-center font-semibold text-balance "
           >
             Transform the way your team works, unlocking collaboration and
             productivity, together.
@@ -54,7 +54,7 @@ export default function Hero() {
             once
             transition={transition}
             delay={0.5}
-            className="text-center text-muted-foreground text-xl text-balance mx-auto max-w-5xl"
+            className="text-center text-muted-foreground md:text-xl text-balance mx-auto md:max-w-5xl"
           >
             Bring your ideas to life faster, manage tasks effortlessly, and keep
             everyone on the same page. Our platform empowers teams to achieve
@@ -64,7 +64,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20, filter: "blur(10px)" }}
             animate={{ opacity: 1, y: 0, filter: "blur(0)" }}
             transition={transition}
-            className="flex gap-4 mt-6"
+            className="flex flex-col md:flex-row gap-4 mt-6 "
           >
             <Button size={"xxl"}>Get Comify for Free</Button>
             <Button variant="secondary" size={"xxl"}>

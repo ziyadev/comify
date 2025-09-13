@@ -21,7 +21,7 @@ export default function Features() {
         }}
         viewport={viewPort}
         transition={transition}
-        className="flex justify-between items-end"
+        className="flex flex-col md:flex-row md:justify-between md:items-end px-4 md:px-0"
       >
         <motion.div
           initial={{
@@ -48,7 +48,7 @@ export default function Features() {
             <span className="bg-foreground w-4 rounded-full h-1.5" />
             <span>Our first in class features</span>
           </motion.div>
-          <h1 className="text-5xl font-semibold text-balance ">
+          <h1 className="text-3xl md:text-5xl font-semibold text-balance ">
             Tools that keep you organised, on track, and ready to achieve more.
           </h1>
         </motion.div>
@@ -63,7 +63,7 @@ export default function Features() {
           transition={transition}
           className="space-y-2 w-full max-w-lg flex flex-col  items-start"
         >
-          <p className=" text-muted-foreground text-lg ">
+          <p className=" text-muted-foreground md:text-lg ">
             From customisable workspaces to effortless team collaboration,
             Comify is designed to simplify your day and help you focus on what
             matters most.
@@ -128,7 +128,7 @@ export default function Features() {
         }}
         viewport={viewPort}
         transition={transition}
-        className="grid gap-6 w-full"
+        className="grid gap-6 w-full px-2"
       >
         <div className="relative w-full rounded-2xl  aspect-[16/10] overflow-hidden flex justify-center items-center">
           <Image src={heropreview} alt="Hero Preview" fill objectFit="cover" />
@@ -161,7 +161,7 @@ export default function Features() {
           initial="hidden"
           whileInView="show"
           viewport={viewPort}
-          className="grid grid-cols-3 gap-6 w-full"
+          className="grid md:grid-cols-3 gap-6 w-full"
         >
           {/* first feature */}
           <motion.div

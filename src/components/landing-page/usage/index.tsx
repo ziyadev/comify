@@ -123,7 +123,7 @@ export default function Usage() {
                 <span className="bg-background w-4 rounded-full h-1.5" />
                 <span>How people use comify</span>
               </div>
-              <h1 className="text-5xl font-semibold text-balance ">
+              <h1 className="text-3xl md:text-5xl font-semibold text-balance ">
                 From individuals to teams, Comify adapts to any workflow.
               </h1>
             </div>
@@ -168,7 +168,7 @@ export default function Usage() {
                   />
                   <div
                     aria-hidden="true"
-                    className="absolute inset-0 size-full bg-linear-to-t via-[#161616]/75 from-[#161616] from-[calc(7/16*100%)] ring-1 ring-gray-950/10 ring-inset sm:from-10%"
+                    className="absolute inset-0 size-full bg-linear-to-t via-[#161616]/75 from-[#161616] md:from-[calc(7/16*100%)] ring-1 ring-gray-950/10 ring-inset sm:from-10%"
                   />
                   <figure className="relative p-6">
                     <figcaption>
@@ -238,7 +238,7 @@ export default function Usage() {
           </div>
         </div>
         <div>
-          <div className="grid grid-cols-4 border-y border-white/5  -mx-12 *:border-white/5 [clip-path:inset(1px_0_0_1px)] *:border-l *:border-t ">
+          <div className="grid md:grid-cols-4 border-y border-white/5  -mx-12 *:border-white/5 [clip-path:inset(1px_0_0_1px)] *:border-l *:border-t ">
             {[
               {
                 title: "Collaboration",
@@ -334,7 +334,7 @@ export default function Usage() {
                 <span className="bg-background w-4 rounded-full h-1.5" />
                 <span>Comify's impact in numbers.</span>
               </div>
-              <h1 className="text-5xl font-semibold text-balance ">
+              <h1 className="text-3xl md:text-5xl font-semibold text-balance ">
                 Engineering teams everywhere love and use Comify to build better
                 products.
               </h1>

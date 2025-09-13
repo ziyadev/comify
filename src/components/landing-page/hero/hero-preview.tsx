@@ -12,6 +12,7 @@ export default function HeroPreview() {
     offset: ["start end", "start start"],
   });
   const scale = useTransform(scrollYProgress, [0, 1], [0.9, 1]);
+
   return (
     <motion.div
       ref={ref}
@@ -19,7 +20,7 @@ export default function HeroPreview() {
       animate={{ opacity: 1, scale: 0.9, y: 0, filter: "blur(0px)" }}
       style={{ scale }}
       transition={{ ...transition, delay: 0.5 }}
-      className="container mx-auto px-10 group"
+      className="container mx-auto px-2 md:px-10 group"
     >
       <div className="relative rounded-2xl  aspect-[16/10] overflow-hidden flex justify-center items-center shadow-xs">
         <Image src={heropreview} alt="Hero Preview" fill objectFit="cover" />
