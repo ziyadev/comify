@@ -168,7 +168,11 @@ export default function Usage() {
                   />
                   <div
                     aria-hidden="true"
-                    className="absolute inset-0 size-full bg-linear-to-t via-[#161616]/75 from-[#161616] md:from-[calc(7/16*100%)] ring-1 ring-gray-950/10 ring-inset sm:from-10%"
+                    className="absolute hidden md:block inset-0 size-full bg-linear-to-t via-[#161616]/75 from-[#161616] from-[calc(7/16*100%)] ring-1 ring-gray-950/10 ring-inset sm:from-10%"
+                  />
+                  <div
+                    aria-hidden="true"
+                    className="absolute  md:hidden inset-0 size-full bg-linear-to-t via-[#161616]/75 from-[#161616] from-[calc(2/16*100%)] ring-1 ring-gray-950/10 ring-inset sm:from-10%"
                   />
                   <figure className="relative p-6">
                     <figcaption>
