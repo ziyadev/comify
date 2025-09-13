@@ -29,19 +29,19 @@ export default function PricingComparator() {
                     Get Started
                   </Button>
                 </th>
-                <th className=" space-y-3 px-4">
-                  <span>Pro</span>
-                  <Button size={"sm"} className="w-full mt-3">
-                    Get Started
-                  </Button>
-                </th>
                 <th className="space-y-3">
-                  <span>Startup</span>
+                  <span>Premium</span>
                   <Button
                     size={"sm"}
                     variant={"outline"}
                     className="w-full mt-3"
                   >
+                    Get Started
+                  </Button>
+                </th>
+                <th className=" space-y-3 px-4">
+                  <span>Pro</span>
+                  <Button size={"sm"} className="w-full mt-3">
                     Get Started
                   </Button>
                 </th>

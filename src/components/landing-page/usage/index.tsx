@@ -244,45 +244,76 @@ export default function Usage() {
                 title: "Collaboration",
                 description:
                   "Share insights and work together seamlessly across teams.",
+                bgFrom: "from-green-600/15",
               },
               {
                 title: "Prioritization",
                 description:
                   "Focus on the most impactful tasks and features first.",
+                bgFrom: "from-blue-600/15",
               },
               {
                 title: "Feedback Loop",
                 description:
                   "Continuously gather and act on user and customer feedback.",
+                bgFrom: "from-yellow-600/15",
               },
               {
                 title: "Roadmapping",
                 description:
                   "Plan your product future with clear visibility and strategy.",
+                bgFrom: "from-indigo-600/15",
               },
               {
                 title: "Analytics",
                 description:
                   "Understand user behavior and product performance with data.",
+                bgFrom: "from-red-600/15",
               },
               {
                 title: "Integrations",
                 description:
                   "Connect with your favorite tools and services effortlessly.",
+                bgFrom: "from-purple-600/15",
               },
               {
                 title: "Customization",
                 description:
                   "Tailor the platform to fit your unique workflow and needs.",
+                bgFrom: "from-orange-600/15",
               },
               {
                 title: "Scalability",
                 description:
                   "Grow your operations and user base without limits or hurdles.",
+                bgFrom: "from-teal-600/15",
               },
             ].map((feature, idx) => {
               return (
-                <div key={idx} className=" p-8 ">
+                <div
+                  key={idx}
+                  className={cn(
+                    "relative p-8 before:absolute before:inset-0 before:bg-gradient-to-t before:opacity-0 before:duration-300 hover:before:opacity-100",
+                    {
+                      "before:from-green-600/15":
+                        feature.bgFrom === "from-green-600/15",
+                      "before:from-blue-600/15":
+                        feature.bgFrom === "from-blue-600/15",
+                      "before:from-yellow-600/15":
+                        feature.bgFrom === "from-yellow-600/15",
+                      "before:from-red-600/15":
+                        feature.bgFrom === "from-red-600/15",
+                      "before:from-purple-600/15":
+                        feature.bgFrom === "from-purple-600/15",
+                      "before:from-orange-600/15":
+                        feature.bgFrom === "from-orange-600/15",
+                      "before:from-teal-600/15":
+                        feature.bgFrom === "from-teal-600/15",
+                      "before:from-indigo-600/15":
+                        feature.bgFrom === "from-indigo-600/15",
+                    },
+                  )}
+                >
                   <div className="space-y-2">
                     <h3 className=" text-background text-lg font-medium">
                       {feature.title}

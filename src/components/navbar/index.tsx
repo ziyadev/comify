@@ -38,7 +38,7 @@ export default function Navbar() {
       initial={{ y: -100, opacity: 0, filter: "blur(10px)", scale: 0.5 }}
       animate={{ y: 0, opacity: 1, filter: "blur(0px)", scale: 1 }}
       transition={transition}
-      className="border-b fixed top-4 z-[100] bg-background/80 backdrop-blur-lg max-w-6xl left-1/2 -translate-x-1/2 w-full border px-8 rounded-xl"
+      className="border-b fixed top-4 z-[100] bg-muted shadow-sm max-w-6xl left-1/2 -translate-x-1/2 w-full border px-8 rounded-xl"
     >
       <nav className=" flex justify-between items-center h-16 mx-auto max-w-6xl">
         <Link href="/">

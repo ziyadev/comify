@@ -4,7 +4,7 @@ import * as motion from "motion/react-client";
 import { fadeUp, transition, viewPort } from "../ui/motions/transitions";
 export default function PricingCards() {
   return (
-    <section className="mx-auto max-w-5xl">
+    <section className="mx-auto max-w-6xl">
       <motion.div
         variants={{
           hidden: { ...fadeUp.initial, y: 50 },
@@ -18,7 +18,7 @@ export default function PricingCards() {
         initial="hidden"
         whileInView="show"
         viewport={viewPort}
-        className=" grid gap-6 md:grid-cols-3"
+        className=" grid gap-6 md:grid-cols-4"
       >
         <motion.div
           variants={{
@@ -30,14 +30,14 @@ export default function PricingCards() {
         >
           <div className="space-y-4">
             <div>
-              <h2 className="text-title font-medium">Free</h2>
-              <span className="text-title my-3 block text-2xl font-semibold">
+              <h2 className=" font-medium">Free</h2>
+              <span className=" my-3 block text-2xl font-semibold">
                 $0 / mo
               </span>
               <p className="text-sm">Per editor</p>
             </div>
             <hr className="border-dashed border-black/5" />
-            <ul className="list-outside list-image-[url(/dark-check.svg)] space-y-3 pl-4 text-sm *:pl-2 dark:list-image-[url(/check.svg)]">
+            <ul className=" list-disc  space-y-3 pl-4 text-sm *:pl-2 ">
               <li>Basic Analytics Dashboard</li>
               <li>5GB Cloud Storage</li>
               <li>Email and Chat Support</li>
@@ -54,22 +54,53 @@ export default function PricingCards() {
             show: { ...fadeUp.animate },
           }}
           transition={transition}
+          className=" bg-muted p-6 rounded-xl flex flex-col justify-between space-y-8 shadow-gray-950/[0.03]"
+        >
+          <div className="space-y-4">
+            <div>
+              <h2 className=" font-medium">Premium</h2>
+              <span className=" my-3 block text-2xl font-semibold">
+                $49 / mo
+              </span>
+              <p className="text-sm">Per editor</p>
+            </div>
+            <hr className="border-dashed border-black/5" />
+            <ul className=" list-disc space-y-3 pl-4 text-sm *:pl-2 ">
+              <li>Everything in Pro Plan</li>
+              <li>Advanced Analytics & Reporting</li>
+              <li>50GB Cloud Storage</li>
+              <li>Priority Email, Chat & Phone Support</li>
+              <li>Dedicated Account Manager</li>
+              <li>Multi-User Access (up to 5 editors)</li>
+            </ul>
+          </div>
+          <div className="space-y-4 w-full grid">
+            <hr className="border-dashed border-black/5" />
+            <Button>Get Started</Button>
+          </div>
+        </motion.div>
+        <motion.div
+          variants={{
+            hidden: { ...fadeUp.initial, y: 50 },
+            show: { ...fadeUp.animate },
+          }}
+          transition={transition}
           className=" p-6 rounded-xl relative shadow-gray-950/[0.03] bg-primary text-background"
         >
           <span className="absolute inset-x-0 -top-3 mx-auto flex h-6 w-fit items-center rounded-full bg-muted px-3 py-1 text-xs font-medium text-foreground shadow-md">
-            Popular
+            Most Popular
           </span>
-          <div className="flex flex-col justify-between space-y-8 [--ui-border-color:var(--input-border)]">
+          <div className="flex flex-col justify-between space-y-8 ">
             <div className="space-y-4">
               <div>
-                <h2 className="text-title font-medium">Pro</h2>
-                <span className="text-title my-3 block text-2xl font-semibold">
+                <h2 className=" font-medium">Pro</h2>
+                <span className=" my-3 block text-2xl font-semibold">
                   $19 / mo
                 </span>
                 <p className="text-sm">Per editor</p>
               </div>
               <hr className="border-dashed border-white/5" />
-              <ul className="text-title list-outside list-image-[url(/dark-check.svg)] space-y-3 pl-5 text-sm *:pl-2 dark:list-image-[url(/check.svg)]">
+              <ul className=" list-disc space-y-3 pl-5 text-sm *:pl-2 ">
                 <li>Basic Analytics Dashboard</li>
                 <li>5GB Cloud Storage</li>
                 <li>Email and Chat Support</li>
@@ -98,17 +129,15 @@ export default function PricingCards() {
         >
           <div className="space-y-4">
             <div>
-              <h2 className="text-title font-medium">Startup</h2>
-              <span className="text-title my-3 block text-2xl font-semibold">
-                $29 / mo
+              <h2 className=" font-medium">Startup</h2>
+              <span className=" my-3 block text-2xl font-semibold">
+                $Custom / mo
               </span>
               <p className="text-sm">Per editor</p>
             </div>
             <hr className="border-dashed border-black/5" />
-            <ul className="list-outside list-image-[url(/dark-check.svg)] space-y-3 pl-4 text-sm *:pl-2 dark:list-image-[url(/check.svg)]">
-              <li>Everything in Basic Plan</li>
-              <li>5GB Cloud Storage</li>
-              <li>Email and Chat Support</li>
+            <ul className="list-disc space-y-3 pl-4 text-sm *:pl-2 ">
+              <li>Everything is customisable</li>
             </ul>
           </div>
           <div className="space-y-4 w-full grid">
