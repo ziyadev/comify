@@ -1,5 +1,5 @@
 import * as React from "react";
-const Vercel = (props) => (
+const Vercel = (props: React.SVGProps<SVGSVGElement>) => (
   <svg
     viewBox="0 0 256 222"
     width="1em"
