@@ -23,7 +23,7 @@ export default function HeroPreview() {
       className="container mx-auto px-2 md:px-10 group"
     >
       <div className="pb-24 px-6 lg:px-8">
-        <div className="relative   rounded-2xl  aspect-[16/10] overflow-hidden md:flex justify-center items-center shadow-xs">
+        <div className="relative   rounded-2xl  aspect-[16/10] overflow-x-hidden md:overflow-hidden md:flex justify-center items-center shadow-xs">
           <Image
             className="hidden md:block"
             src={heropreview}
