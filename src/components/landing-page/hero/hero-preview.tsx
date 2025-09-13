@@ -20,10 +20,10 @@ export default function HeroPreview() {
       animate={{ opacity: 1, scale: 0.9, y: 0, filter: "blur(0px)" }}
       style={{ scale }}
       transition={{ ...transition, delay: 0.5 }}
-      className="container mx-auto px-2 md:px-10 group"
+      className="container mx-auto px-2 md:px-10 group overflow-hidden"
     >
       <div className="pb-24 px-6 lg:px-8">
-        <div className="relative   rounded-2xl  aspect-[16/10] overflow-x-hidden md:overflow-hidden md:flex justify-center items-center shadow-xs">
+        <div className="relative   rounded-2xl  aspect-[16/10] md:overflow-hidden md:flex justify-center items-center shadow-xs">
           <Image
             className="hidden md:block"
             src={heropreview}
