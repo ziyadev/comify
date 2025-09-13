@@ -4,7 +4,7 @@ import OurStory from "@/components/about/our-story";
 
 export default function PricingPage() {
   return (
-    <div className="space-y-22">
+    <div className="md:space-y-22">
       <Hero />
       <OurStory />
       <Cta />

@@ -25,7 +25,7 @@ export default function Hero() {
           by="word"
           once
           transition={transition}
-          className="text-6xl/[72px]  text-center font-semibold text-balance "
+          className="text-3xl md:text-6xl/[72px]  text-center font-semibold text-balance "
         >
           Empowering Innovation Through Technology
         </TextAnimate>
@@ -35,7 +35,7 @@ export default function Hero() {
           once
           transition={transition}
           delay={0.5}
-          className="text-center text-muted-foreground text-xl text-balance mx-auto max-w-5xl"
+          className="text-center text-muted-foreground md:text-xl text-balance mx-auto max-w-5xl"
         >
           At comify, we're driven by a passion for creating impactful solutions.
           Learn about our journey, our core values, and the dedicated team

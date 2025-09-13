@@ -130,7 +130,7 @@ export default function Features() {
         transition={transition}
         className="grid gap-6 w-full px-2"
       >
-        <div className="relative w-full rounded-2xl  aspect-[16/10] overflow-hidden flex justify-center items-center">
+        <div className="relative w-full rounded-2xl hidden md:flex  aspect-[16/10] overflow-hidden justify-center items-center">
           <Image src={heropreview} alt="Hero Preview" fill objectFit="cover" />
           <div className="pointer-events-none  z-10 absolute inset-x-0 bottom-0 w-full h-[20%] bg-gradient-to-t from-background via-background/90 to-transparent"></div>
           <div className="absolute  translate-x-[6%] translate-y-[10%] ">

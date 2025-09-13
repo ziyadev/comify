@@ -21,6 +21,14 @@ import {
 } from "../ui/navigation-menu";
 import Link from "next/link";
 import { transition } from "../ui/motions/transitions";
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "../ui/sheet";
 const components: { title: string; href: string; description: string }[] = [
   {
     title: "Blogs",
@@ -39,7 +47,7 @@ export default function Navbar() {
       initial={{ y: -100, opacity: 0, filter: "blur(10px)", scale: 0.5 }}
       animate={{ y: 0, opacity: 1, filter: "blur(0px)", scale: 1 }}
       transition={transition}
-      className="border-b fixed top-10 md:top-4 z-[100] bg-muted shadow-sm max-w-sm sm:max-w-md md:max-w-xl lg:max-w-6xl left-1/2 -translate-x-1/2 w-full border px-8 rounded-xl"
+      className="border-b fixed top-3 md:top-4 z-30 bg-muted shadow-sm max-w-sm sm:max-w-md md:max-w-xl lg:max-w-6xl left-1/2 -translate-x-1/2 w-full border px-8 rounded-xl"
     >
       <nav className=" flex justify-between items-center h-16 mx-auto lg:max-w-6xl">
         <Link href="/">
@@ -155,9 +163,57 @@ export default function Navbar() {
           </Button>
         </div>
         <div className="lg:hidden flex items-center ">
-          <Button size={"icon"} variant={"ghost"}>
-            <AlignJustify className="size-6" />
-          </Button>
+          <Sheet>
+            <SheetTrigger asChild>
+              <Button size={"icon"} variant={"ghost"}>
+                <AlignJustify className="size-6" />
+              </Button>
+            </SheetTrigger>
+            <SheetContent>
+              <SheetHeader className="sr-only">
+                <SheetTitle>Menu</SheetTitle>
+              </SheetHeader>
+              <div className="grid gap-4 mt-20 px-3">
+                <Button
+                  variant={"ghost"}
+                  className="text-muted-foreground"
+                  asChild
+                >
+                  <Link href="/pricing">Pricing</Link>
+                </Button>
+                <Button
+                  asChild
+                  variant={"ghost"}
+                  className="text-muted-foreground"
+                >
+                  <Link href="/about">About</Link>
+                </Button>
+                <Button
+                  variant={"ghost"}
+                  className="text-muted-foreground"
+                  asChild
+                >
+                  <Link
+                    href="https://github.com/ziyadev/comify"
+                    target="_blank"
+                  >
+                    Docs
+                    <ArrowUpRight />
+                  </Link>
+                </Button>
+                <Button variant={"ghost"} className="text-muted-foreground">
+                  Changelog
+                  <ArrowUpRight />
+                </Button>
+                <Button>
+                  Get started
+                  <span className="p-1 bg-gray-900 rounded ">
+                    <ArrowUpRight />
+                  </span>
+                </Button>
+              </div>
+            </SheetContent>
+          </Sheet>
         </div>
       </nav>
     </motion.header>

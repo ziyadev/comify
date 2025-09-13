@@ -21,6 +21,7 @@ export default function Hero() {
       initial={{ opacity: 0, scale: 0.9, filter: "blur(10px)", y: 100 }}
       animate={{ opacity: 1, scale: 1, filter: "blur(0px)", y: 0 }}
       transition={transition}
+      className="overflow-hidden"
     >
       <div className="max-w-7xl mx-auto border-x relative pt-12">
         <Dot className="absolute size-8   -bottom-4 -right-4 z-20" />
