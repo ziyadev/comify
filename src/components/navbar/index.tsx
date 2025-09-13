@@ -41,7 +41,9 @@ export default function Navbar() {
       className="border-b fixed top-4 z-[100] bg-background/80 backdrop-blur-lg max-w-6xl left-1/2 -translate-x-1/2 w-full border px-8 rounded-xl"
     >
       <nav className=" flex justify-between items-center h-16 mx-auto max-w-6xl">
-        <Image src="/logo.svg" alt="Comify Logo" width={40} height={45} />
+        <Link href="/">
+          <Image src="/logo.svg" alt="Comify Logo" width={40} height={45} />
+        </Link>
         <NavigationMenu viewport={false}>
           <NavigationMenuList>
             <NavigationMenuItem>
@@ -102,6 +104,7 @@ export default function Navbar() {
                 </ul>
               </NavigationMenuContent>
             </NavigationMenuItem>
+
             <NavigationMenuItem>
               <NavigationMenuLink
                 asChild
@@ -109,7 +112,7 @@ export default function Navbar() {
                   className: "bg-transparent",
                 })}
               >
-                <Link href="/docs">Docs</Link>
+                <Link href="/pricing">Pricing</Link>
               </NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
@@ -119,17 +122,20 @@ export default function Navbar() {
                   className: "bg-transparent",
                 })}
               >
-                <Link href="/docs">Pricing</Link>
+                <Link href="/about">About</Link>
               </NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
               <NavigationMenuLink
                 asChild
                 className={navigationMenuTriggerStyle({
-                  className: "bg-transparent",
+                  className: "bg-transparent flex flex-row",
                 })}
               >
-                <Link href="/docs">About</Link>
+                <Link href="https://github.com/ziyadev/comify" target="_blank">
+                  Docs
+                  <ArrowUpRight />
+                </Link>
               </NavigationMenuLink>
             </NavigationMenuItem>
           </NavigationMenuList>
