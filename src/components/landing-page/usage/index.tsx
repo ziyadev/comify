@@ -192,13 +192,13 @@ export default function Usage() {
           </div>
           <div
             className={cn(
-              "absolute top-0 bottom-0 z-10 h-full w-24 from-[#161616]/80 to-transparent",
+              "absolute top-0 bottom-0 z-10 h-full w-12 md:w-24 from-[#161616]/80 to-transparent",
               "-left-12 bg-gradient-to-r",
             )}
           />
           <div
             className={cn(
-              "absolute top-0 bottom-0 z-10 h-full w-24 from-[#161616]/80 to-transparent",
+              "absolute top-0 bottom-0 z-10 h-full w-12 md:w-24 from-[#161616]/80 to-transparent",
               "-right-12 bg-gradient-to-l",
             )}
           />
