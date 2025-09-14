@@ -5,7 +5,7 @@ export default function PricingComparator() {
     <section className="py-32 ">
       <div className="mx-auto max-w-6xl  ">
         <div className="w-full overflow-x-auto lg:overflow-visible">
-          <div className="sticky top-24  bg-muted w-[200vw] flex flex-col justify-center items-start h-28 rounded-xl border shadow-xs border-black/5 p-8">
+          <div className="sticky top-24  bg-muted w-[200vw] md:w-full max-w-6xl flex flex-col justify-center items-start h-28 rounded-xl border shadow-xs border-black/5 p-8">
             <div>
               <h3 className=" md:text-xl font-bold">Compare prices</h3>
               <p className="text-muted-foreground text-sm md:text-base ">
