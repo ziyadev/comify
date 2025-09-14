@@ -72,7 +72,7 @@ export default function Usage() {
       }}
       className=" relative bg-[#161616]"
     >
-      <div className="relative top-0 z-0 mx-auto mt-0 flex h-16 max-w-[min(700px,calc(100vw-2rem))] -translate-y-px items-start justify-center text-white">
+      <div className="relative top-0 z-0 mx-auto mt-0 flex h-6 md:h-12 max-w-[min(700px,calc(100vw-2rem))] -translate-y-px items-start justify-center text-white">
         <svg
           viewBox="0 0 85 64"
           fill="none"
@@ -382,7 +382,7 @@ export default function Usage() {
           </p>
         </div>
       </div>
-      <div className="relative top-0 z-0 mx-auto mt-0 flex h-16 max-w-[min(700px,calc(100vw-2rem))] -translate-y-px items-start justify-center text-white">
+      <div className="relative top-0 z-0 mx-auto mt-0 flex h-6 md:h-12 max-w-[min(700px,calc(100vw-2rem))] -translate-y-px items-start justify-center text-white">
         {/* Left arrow flipped vertically */}
         <svg
           viewBox="0 0 85 64"

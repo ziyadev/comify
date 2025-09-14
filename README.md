@@ -60,4 +60,5 @@ Make sure you have [Bun](https://bun.sh/) installed on your machine.
 ---
 
 Enjoy building your next landing page with Comify!
+
 Contributions are welcome! Just fork the repository and create a pull request.
