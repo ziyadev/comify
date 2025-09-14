@@ -4,7 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/landing-page/footer";
 import SmoothScrollWrapper from "@/components/smooth-scroll-wrapper";
-
+import { Analytics } from "@vercel/analytics/next"
 const raleway = Raleway({
   variable: "--font-raleway",
   subsets: ["latin"],
@@ -83,6 +83,7 @@ export default function RootLayout({
       >
         <SmoothScrollWrapper>
           <Navbar />
+          <Analytics />
           {children}
           <Footer />
         </SmoothScrollWrapper>
