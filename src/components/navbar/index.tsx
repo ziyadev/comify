@@ -1,4 +1,3 @@
-"use client";
 import {
   ArrowUpRight,
   CircleCheckIcon,
@@ -9,7 +8,7 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import { Button } from "../ui/button";
-import { motion } from "motion/react";
+import * as motion from "motion/react-client";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -25,11 +24,11 @@ import {
   Sheet,
   SheetClose,
   SheetContent,
-  SheetDescription,
   SheetHeader,
   SheetTitle,
   SheetTrigger,
 } from "../ui/sheet";
+import Github from "../ui/icons/github";
 const components: { title: string; href: string; description: string }[] = [
   {
     title: "Blogs",
@@ -42,7 +41,20 @@ const components: { title: string; href: string; description: string }[] = [
     description: "Track all new features, improvements, and bug fixes.",
   },
 ];
-export default function Navbar() {
+async function getStars() {
+  const res = await fetch("https://api.github.com/repos/ziyadev/comify", {
+    next: { revalidate: 3600 }, // cache for 1 hour
+  });
+
+  if (!res.ok) {
+    return null;
+  }
+
+  const data = await res.json();
+  return data.stargazers_count as number;
+}
+export default async function Navbar() {
+  const stars = await getStars();
   return (
     <motion.header
       initial={{ y: -100, opacity: 0, filter: "blur(10px)", scale: 0.5 }}
@@ -152,9 +164,16 @@ export default function Navbar() {
           </NavigationMenuList>
         </NavigationMenu>
         <div className="space-x-3 hidden lg:block">
-          <Button variant={"ghost"} className="text-muted-foreground">
-            Changelog
-            <ArrowUpRight />
+          <Button variant={"ghost"} className="text-muted-foreground" asChild>
+            <Link
+              href="https://github.com/ziyadev/comify"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Github fill="black" className="size-4" />
+              GitHub {stars !== null ? `(${stars.toLocaleString()})` : "(…)"}
+              <ArrowUpRight className="ml-1 size-4" />
+            </Link>
           </Button>
           <Button>
             Get started
@@ -209,9 +228,21 @@ export default function Navbar() {
                   </Button>
                 </SheetClose>
                 <SheetClose asChild>
-                  <Button variant={"ghost"} className="text-muted-foreground">
-                    Changelog
-                    <ArrowUpRight />
+                  <Button
+                    variant={"ghost"}
+                    className="text-muted-foreground"
+                    asChild
+                  >
+                    <Link
+                      href="https://github.com/ziyadev/comify"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Github fill="black" className="size-4" />
+                      GitHub{" "}
+                      {stars !== null ? `(${stars.toLocaleString()})` : "(…)"}
+                      <ArrowUpRight className="ml-1 size-4" />
+                    </Link>
                   </Button>
                 </SheetClose>
                 <SheetClose asChild>
