@@ -4,7 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/landing-page/footer";
 import SmoothScrollWrapper from "@/components/smooth-scroll-wrapper";
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/next";
 const raleway = Raleway({
   variable: "--font-raleway",
   subsets: ["latin"],
@@ -39,10 +39,6 @@ export const metadata: Metadata = {
   publisher: "ziyadev",
   metadataBase: new URL("https://comify-self.vercel.app"),
   openGraph: {
-    title:
-      "Next.js Landing Page Template | Framer Motion, Lenis, Tailwind CSS & Shadcn UI",
-    description:
-      "Elevate your web projects with this modern Next.js landing page template, featuring smooth animations with Framer Motion, performant scrolling with Lenis, styled with Tailwind CSS, and powered by Shadcn UI components. Perfect for startups, portfolios, and marketing sites.",
     url: "https://comify-self.vercel.app",
     siteName: "Next.js Landing Page Template",
     images: [
@@ -63,7 +59,7 @@ export const metadata: Metadata = {
     description:
       "Elevate your web projects with this modern Next.js landing page template, featuring smooth animations with Framer Motion, performant scrolling with Lenis, styled with Tailwind CSS, and powered by Shadcn UI components. Perfect for startups, portfolios, and marketing sites.",
     creator: "@ziyaDev0",
-    images: ["https://github.com/ziyadev.png"],
+    images: ["/og.png"],
   },
 };
 
